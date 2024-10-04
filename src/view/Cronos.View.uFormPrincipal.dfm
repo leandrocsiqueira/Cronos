@@ -19,12 +19,24 @@ object FormPrincipal: TFormPrincipal
     Top = 8
     object miCadastros: TMenuItem
       Caption = '&Cadastros'
+      object miCadastroPadrao: TMenuItem
+        Action = actCadastroPadrao
+      end
     end
     object miRelatorios: TMenuItem
       Caption = '&Relat'#243'rios'
     end
     object miAjuda: TMenuItem
       Caption = '&Ajuda'
+    end
+  end
+  object alAcoesMenu: TActionList
+    Left = 200
+    Top = 208
+    object actCadastroPadrao: TAction
+      Category = 'Cadastros'
+      Caption = 'C&adastro Padr'#227'o'
+      OnExecute = actCadastroPadraoExecute
     end
   end
 end

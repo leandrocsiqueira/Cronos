@@ -11,14 +11,21 @@ uses
   Vcl.Graphics,
   Vcl.Controls,
   Vcl.Forms,
-  Vcl.Dialogs, Vcl.Menus;
+  Vcl.Dialogs,
+  Vcl.Menus,
+  System.Actions,
+  Vcl.ActnList;
 
 type
   TFormPrincipal = class(TForm)
-    mmPrincipal: TMainMenu;
-    miCadastros: TMenuItem;
-    miRelatorios: TMenuItem;
-    miAjuda: TMenuItem;
+    mmPrincipal:       TMainMenu;
+    miCadastros:       TMenuItem;
+    miRelatorios:      TMenuItem;
+    miAjuda:           TMenuItem;
+    miCadastroPadrao:  TMenuItem;
+    alAcoesMenu: TActionList;
+    actCadastroPadrao: TAction;
+    procedure actCadastroPadraoExecute(Sender: TObject);
   end;
 
 var
@@ -27,5 +34,13 @@ var
 implementation
 
 {$R *.dfm}
+
+uses
+  Cronos.View.uFormBaseCadastro;
+
+procedure TFormPrincipal.actCadastroPadraoExecute(Sender: TObject);
+  begin
+    FormBaseCadastro.Show;
+  end;
 
 end.
