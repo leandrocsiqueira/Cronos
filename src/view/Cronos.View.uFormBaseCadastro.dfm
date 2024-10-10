@@ -4,7 +4,7 @@ object FormBaseCadastro: TFormBaseCadastro
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'FormBaseCadastro'
-  ClientHeight = 757
+  ClientHeight = 601
   ClientWidth = 1086
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,32 +20,28 @@ object FormBaseCadastro: TFormBaseCadastro
     Left = 0
     Top = 0
     Width = 1086
-    Height = 757
+    Height = 601
     Align = alClient
     ActiveCard = cdCadastro
     Caption = 'cpnlCadastroPesquisa'
     TabOrder = 0
-    ExplicitLeft = 320
-    ExplicitTop = 208
-    ExplicitWidth = 300
-    ExplicitHeight = 200
+    ExplicitWidth = 1084
+    ExplicitHeight = 749
     object cdCadastro: TCard
       Left = 1
       Top = 1
       Width = 1084
-      Height = 755
+      Height = 599
       Caption = 'Cadastro'
       CardIndex = 0
       Color = clWhite
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitWidth = 1082
+      ExplicitHeight = 747
       object pnlCadastro: TPanel
         Left = 0
-        Top = 672
+        Top = 516
         Width = 1084
         Height = 83
         Align = alBottom
@@ -53,6 +49,8 @@ object FormBaseCadastro: TFormBaseCadastro
         Color = 16053492
         ParentBackground = False
         TabOrder = 0
+        ExplicitTop = 664
+        ExplicitWidth = 1082
         object btnSalvar: TButton
           Left = 972
           Top = 0
@@ -67,8 +65,7 @@ object FormBaseCadastro: TFormBaseCadastro
           Images = ilListaImagens
           TabOrder = 0
           StyleName = 'Windows'
-          ExplicitLeft = 802
-          ExplicitHeight = 75
+          ExplicitLeft = 970
         end
         object btnCancelar: TButton
           Left = 860
@@ -84,8 +81,7 @@ object FormBaseCadastro: TFormBaseCadastro
           Images = ilListaImagens
           TabOrder = 1
           StyleName = 'Windows'
-          ExplicitLeft = 690
-          ExplicitHeight = 75
+          ExplicitLeft = 858
         end
       end
     end
@@ -93,7 +89,7 @@ object FormBaseCadastro: TFormBaseCadastro
       Left = 1
       Top = 1
       Width = 1084
-      Height = 755
+      Height = 599
       Caption = 'Pesquisa'
       CardIndex = 1
       TabOrder = 1

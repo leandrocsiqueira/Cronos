@@ -1,0 +1,68 @@
+unit Cronos.View.uFormSplash;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage,
+  Vcl.StdCtrls,
+  Vcl.ComCtrls;
+
+type
+  TFormSplash = class(TForm)
+    pnlPrincipal: TPanel;
+    imgLogoSistema: TImage;
+    lblNomeSistema: TLabel;
+    pbCarregamento: TProgressBar;
+    lblStatusCarregamento: TLabel;
+    tmContador: TTimer;
+    imgDll: TImage;
+    imgBancoDados: TImage;
+    imgConfiguracoes: TImage;
+    imgCarregamentoSistema: TImage;
+    procedure tmContadorTimer(Sender: TObject);
+  end;
+
+var
+  FormSplash: TFormSplash;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormSplash.tmContadorTimer(Sender: TObject);
+begin
+  if pbCarregamento.Position < 100 then
+  begin
+    pbCarregamento.StepIt;
+    case pbCarregamento.Position of
+      10:
+        begin
+          lblStatusCarregamento.Caption := 'Carregando dependências...';
+          imgDll.Visible := True;
+        end;
+      25:
+        begin
+          lblStatusCarregamento.Caption := 'Conectando ao banco de dados...';
+          imgBancoDados.Visible := True;
+        end;
+      45:
+        lblStatusCarregamento.Caption := 'Carregando configurações...';
+      75:
+        lblStatusCarregamento.Caption := 'Iniciando o CRONOS...';
+    end;
+  end
+  else
+    Close;
+end;
+
+end.

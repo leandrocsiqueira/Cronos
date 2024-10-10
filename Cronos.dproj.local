@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2024/10/10 08:32:07.667,=C:\Projetos\Cronos\Unit1.pas</Transaction>
+    <Transaction>2024/10/10 08:32:41.785,C:\Projetos\Cronos\src\view\Cronos.View.uFormSplash.dfm=C:\Projetos\Cronos\Unit1.dfm</Transaction>
+    <Transaction>2024/10/10 08:32:41.785,C:\Projetos\Cronos\src\view\Cronos.View.uFormSplash.pas=C:\Projetos\Cronos\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

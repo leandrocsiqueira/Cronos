@@ -1,0 +1,53 @@
+unit Cronos.View.uFormPrincipal;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.Menus,
+  System.Actions,
+  Vcl.ActnList;
+
+type
+  TFormPrincipal = class(TForm)
+    mmPrincipal: TMainMenu;
+    miCadastros: TMenuItem;
+    miRelatorios: TMenuItem;
+    miAjuda: TMenuItem;
+    miCadastroPadrao: TMenuItem;
+    alAcoesMenu: TActionList;
+    actCadastroPadrao: TAction;
+    procedure FormCreate(Sender: TObject);
+    procedure actCadastroPadraoExecute(Sender: TObject);
+  end;
+
+var
+  FormPrincipal: TFormPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  Cronos.View.uFormBaseCadastro,
+  Cronos.View.uFormSplash;
+
+procedure TFormPrincipal.FormCreate(Sender: TObject);
+begin
+  FormSplash := TFormSplash.Create(nil);
+end;
+
+procedure TFormPrincipal.actCadastroPadraoExecute(Sender: TObject);
+begin
+  FormBaseCadastro.Show;
+end;
+
+end.

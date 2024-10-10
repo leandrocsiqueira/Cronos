@@ -18,13 +18,14 @@ uses
 
 type
   TFormPrincipal = class(TForm)
-    mmPrincipal:       TMainMenu;
-    miCadastros:       TMenuItem;
-    miRelatorios:      TMenuItem;
-    miAjuda:           TMenuItem;
-    miCadastroPadrao:  TMenuItem;
+    mmPrincipal: TMainMenu;
+    miCadastros: TMenuItem;
+    miRelatorios: TMenuItem;
+    miAjuda: TMenuItem;
+    miCadastroPadrao: TMenuItem;
     alAcoesMenu: TActionList;
     actCadastroPadrao: TAction;
+    procedure FormCreate(Sender: TObject);
     procedure actCadastroPadraoExecute(Sender: TObject);
   end;
 
@@ -36,11 +37,22 @@ implementation
 {$R *.dfm}
 
 uses
-  Cronos.View.uFormBaseCadastro;
+  Cronos.View.uFormBaseCadastro,
+  Cronos.View.uFormSplash;
+
+procedure TFormPrincipal.FormCreate(Sender: TObject);
+begin
+  FormSplash := TFormSplash.Create(nil);
+  try
+    FormSplash.ShowModal;
+  finally
+    FreeAndNil(FormSplash);
+  end;
+end;
 
 procedure TFormPrincipal.actCadastroPadraoExecute(Sender: TObject);
-  begin
-    FormBaseCadastro.Show;
-  end;
+begin
+  FormBaseCadastro.Show;
+end;
 
 end.

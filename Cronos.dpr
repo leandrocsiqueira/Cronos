@@ -3,7 +3,8 @@ program Cronos;
 uses
   Vcl.Forms,
   Cronos.View.uFormPrincipal in 'src\view\Cronos.View.uFormPrincipal.pas' {FormPrincipal},
-  Cronos.View.uFormBaseCadastro in 'src\view\Cronos.View.uFormBaseCadastro.pas' {FormBaseCadastro};
+  Cronos.View.uFormBaseCadastro in 'src\view\Cronos.View.uFormBaseCadastro.pas' {FormBaseCadastro},
+  Cronos.View.uFormSplash in 'src\view\Cronos.View.uFormSplash.pas' {FormSplash};
 
 {$R *.res}
 

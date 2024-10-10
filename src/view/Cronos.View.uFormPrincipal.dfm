@@ -13,6 +13,7 @@ object FormPrincipal: TFormPrincipal
   Menu = mmPrincipal
   Position = poScreenCenter
   WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
   object mmPrincipal: TMainMenu
     Left = 912
