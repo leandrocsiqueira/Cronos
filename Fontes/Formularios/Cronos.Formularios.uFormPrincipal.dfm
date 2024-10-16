@@ -1,6 +1,7 @@
 object FormPrincipal: TFormPrincipal
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Cronos'
   ClientHeight = 482
@@ -11,17 +12,21 @@ object FormPrincipal: TFormPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Menu = mmPrincipal
+  Menu = MainMenuFormPrincipal
   WindowState = wsMaximized
   TextHeight = 15
-  object mmPrincipal: TMainMenu
+  object MainMenuFormPrincipal: TMainMenu
     Left = 352
     Top = 248
-    object miCadastros: TMenuItem
-      Caption = 'Cadastros'
+    object miCadastro: TMenuItem
+      Caption = 'Cadastro'
+      object miCadastroPadrao: TMenuItem
+        Caption = 'Pesquisar'
+        OnClick = actCarregarFormUsuariosExecute
+      end
     end
-    object miRelatorios: TMenuItem
-      Caption = 'Relat'#243'rios'
+    object miRelatorio: TMenuItem
+      Caption = 'Relat'#243'rio'
     end
     object miAjuda: TMenuItem
       Caption = 'Ajuda'
