@@ -135,6 +135,10 @@
             <Form>FormPadrao</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Fontes\Formularios\Cronos.Formularios.uFormSplash.pas">
+            <Form>FormSplash</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

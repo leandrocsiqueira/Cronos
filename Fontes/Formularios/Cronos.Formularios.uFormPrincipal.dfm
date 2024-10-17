@@ -9,20 +9,21 @@ object FormPrincipal: TFormPrincipal
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
+  Font.Height = -18
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Menu = MainMenuFormPrincipal
+  Menu = mmFormPrincipal
   WindowState = wsMaximized
-  TextHeight = 15
-  object MainMenuFormPrincipal: TMainMenu
+  OnCreate = FormCreate
+  TextHeight = 25
+  object mmFormPrincipal: TMainMenu
     Left = 352
     Top = 248
     object miCadastro: TMenuItem
       Caption = 'Cadastro'
-      object miCadastroPadrao: TMenuItem
-        Caption = 'Pesquisar'
-        OnClick = actCarregarFormUsuariosExecute
+      object MenuItemCadastroPadrao: TMenuItem
+        Caption = 'Cadastro Padr'#227'o'
+        OnClick = MenuItemCadastroPadraoClick
       end
     end
     object miRelatorio: TMenuItem

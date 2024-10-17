@@ -3,32 +3,47 @@ unit Cronos.Formularios.uFormPadrao;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
-  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  Vcl.WinXPanels, Vcl.ExtCtrls, Data.DB, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids,
-  System.ImageList, Vcl.ImgList, System.Actions, Vcl.ActnList;
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.WinXPanels,
+  Vcl.ExtCtrls,
+  Data.DB,
+  Vcl.StdCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  System.ImageList,
+  Vcl.ImgList,
+  System.Actions,
+  Vcl.ActnList;
 
 type
   TFormPadrao = class(TForm)
-    cardPnlConteudo: TCardPanel;
-    cardPesquisa: TCard;
-    cardCadastro: TCard;
+    crdpnlPnlConteudo: TCardPanel;
+    crdPesquisa: TCard;
+    crdCadastro: TCard;
     pnlPesquisaTopo: TPanel;
     pnlPesquisaRodape: TPanel;
     pnlPesquisaCentro: TPanel;
-    dbgDados: TDBGrid;
+    dbgrdDados: TDBGrid;
     edtPesquisa: TEdit;
     lblPesquisa: TLabel;
     btnPesquisar: TButton;
-    imglIcones: TImageList;
-    btnAdicionarRegistro: TButton;
-    btnAlterarRegistro: TButton;
-    btnExcluirRegistro: TButton;
-    btnImprimirRegistros: TButton;
+    ilFormPadrao: TImageList;
+    btnAdicionar: TButton;
+    btnAlterar: TButton;
+    btnExcluir: TButton;
+    btnImprimir: TButton;
     pnlCadastroRodape: TPanel;
-    btnCadastroSalvar: TButton;
-    btnCadastroCancelar: TButton;
-    ActionListFormPadrao: TActionList;
+    btnactCnPrefixWizard5: TButton;
+    btnactCnPrefixWizard6: TButton;
+    actlstFormPadrao: TActionList;
     actAdicionar: TAction;
     actAlterar: TAction;
     actExcluir: TAction;
@@ -36,17 +51,17 @@ type
     actPesquisar: TAction;
     actCancelar: TAction;
     actSalvar: TAction;
-    procedure edtPesquisaKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
+    procedure edtPesquisaKeyDown(Sender: TObject; var Key: Word; Shift:
+      TShiftState);
     procedure actAlterarExecute(Sender: TObject);
     procedure actCancelarExecute(Sender: TObject);
     procedure actSalvarExecute(Sender: TObject);
     procedure actExcluirExecute(Sender: TObject);
     procedure actImprimirExecute(Sender: TObject);
-    procedure actPesquisarExecute(Sender: TObject);
     procedure actAdicionarExecute(Sender: TObject);
+    procedure actPesquisarExecute(Sender: TObject);
   private
-    procedure AtivarCard(Card: TCard);
+    procedure AtivarCard(const Card: TCard);
   end;
 
 var
@@ -58,52 +73,53 @@ implementation
 
 procedure TFormPadrao.actAdicionarExecute(Sender: TObject);
 begin
-  AtivarCard(cardCadastro);
+  AtivarCard(crdCadastro)
 end;
 
 procedure TFormPadrao.actAlterarExecute(Sender: TObject);
 begin
-  AtivarCard(cardCadastro);
+  AtivarCard(crdCadastro)
 end;
 
 procedure TFormPadrao.actCancelarExecute(Sender: TObject);
 begin
-  AtivarCard(cardPesquisa);
+  AtivarCard(crdPesquisa)
 end;
 
 procedure TFormPadrao.actExcluirExecute(Sender: TObject);
 begin
-  AtivarCard(cardCadastro);
+  AtivarCard(crdCadastro)
 end;
 
 procedure TFormPadrao.actImprimirExecute(Sender: TObject);
 begin
-  //to-do
+  // to-do
 end;
 
 procedure TFormPadrao.actPesquisarExecute(Sender: TObject);
 begin
-  //to-do
+  // to-do
 end;
 
 procedure TFormPadrao.actSalvarExecute(Sender: TObject);
 begin
-  //to-do
+  // to-do
 end;
 
-procedure TFormPadrao.edtPesquisaKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+procedure TFormPadrao.edtPesquisaKeyDown(Sender: TObject; var Key: Word; Shift:
+  TShiftState);
 begin
   if Key = VK_RETURN then
   begin
     actPesquisarExecute(Sender);
-    Key := 0;
+    Key := 0
   end;
 end;
 
-procedure TFormPadrao.AtivarCard(Card: TCard);
+procedure TFormPadrao.AtivarCard(const Card: TCard);
 begin
-  cardPnlConteudo.ActiveCard := Card;
+  crdpnlPnlConteudo.ActiveCard := Card
 end;
 
 end.
+

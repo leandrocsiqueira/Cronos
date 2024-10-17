@@ -3,66 +3,63 @@ object FormPadrao: TFormPadrao
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  ClientHeight = 600
-  ClientWidth = 1032
+  ClientHeight = 624
+  ClientWidth = 1087
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -18
+  Font.Height = -20
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
-  TextHeight = 25
-  object cardPnlConteudo: TCardPanel
+  TextHeight = 28
+  object crdpnlPnlConteudo: TCardPanel
     Left = 0
     Top = 0
-    Width = 1032
-    Height = 600
+    Width = 1087
+    Height = 624
     Align = alClient
-    ActiveCard = cardPesquisa
-    Caption = 'cardPnlConteudo'
+    ActiveCard = crdPesquisa
+    Caption = 'CardPanelConteudo'
     TabOrder = 0
-    ExplicitLeft = 240
-    ExplicitTop = 176
-    ExplicitWidth = 300
-    ExplicitHeight = 200
-    object cardPesquisa: TCard
+    ExplicitWidth = 1085
+    ExplicitHeight = 616
+    object crdPesquisa: TCard
       Left = 1
       Top = 1
-      Width = 1030
-      Height = 598
-      Caption = 'cardPesquisa'
+      Width = 1085
+      Height = 622
+      Caption = 'Pesquisa'
       CardIndex = 0
       TabOrder = 0
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitWidth = 1083
+      ExplicitHeight = 614
       object pnlPesquisaTopo: TPanel
         Left = 0
         Top = 0
-        Width = 1030
+        Width = 1085
         Height = 91
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitWidth = 1083
         object lblPesquisa: TLabel
-          Left = 13
-          Top = 25
-          Width = 74
-          Height = 25
+          Left = 11
+          Top = 18
+          Width = 81
+          Height = 28
           Caption = 'Pesquisar'
         end
         object edtPesquisa: TEdit
           Left = 11
-          Top = 52
+          Top = 47
           Width = 545
-          Height = 33
+          Height = 36
           TabOrder = 0
           OnKeyDown = edtPesquisaKeyDown
         end
         object btnPesquisar: TButton
-          Left = 929
+          Left = 984
           Top = 0
           Width = 101
           Height = 91
@@ -70,29 +67,31 @@ object FormPadrao: TFormPadrao
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -17
+          Font.Height = -18
           Font.Name = 'Segoe UI'
           Font.Style = []
           ImageAlignment = iaTop
           ImageIndex = 6
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 1
           StyleName = 'Windows'
-          ExplicitTop = -6
+          ExplicitLeft = 982
         end
       end
       object pnlPesquisaRodape: TPanel
         Left = 0
-        Top = 502
-        Width = 1030
+        Top = 526
+        Width = 1085
         Height = 96
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        object btnAdicionarRegistro: TButton
-          Left = 920
+        ExplicitTop = 518
+        ExplicitWidth = 1083
+        object btnAdicionar: TButton
+          Left = 975
           Top = 0
           Width = 110
           Height = 96
@@ -100,21 +99,20 @@ object FormPadrao: TFormPadrao
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -17
+          Font.Height = -18
           Font.Name = 'Segoe UI'
           Font.Style = []
           ImageAlignment = iaTop
           ImageIndex = 0
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 0
           StyleName = 'Windows'
-          ExplicitLeft = 929
-          ExplicitHeight = 102
+          ExplicitLeft = 973
         end
-        object btnAlterarRegistro: TButton
-          Left = 810
+        object btnAlterar: TButton
+          Left = 865
           Top = 0
           Width = 110
           Height = 96
@@ -122,21 +120,20 @@ object FormPadrao: TFormPadrao
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -17
+          Font.Height = -18
           Font.Name = 'Segoe UI'
           Font.Style = []
           ImageAlignment = iaTop
           ImageIndex = 1
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 1
           StyleName = 'Windows'
-          ExplicitLeft = 828
-          ExplicitHeight = 102
+          ExplicitLeft = 863
         end
-        object btnExcluirRegistro: TButton
-          Left = 700
+        object btnExcluir: TButton
+          Left = 755
           Top = 0
           Width = 110
           Height = 96
@@ -144,21 +141,20 @@ object FormPadrao: TFormPadrao
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -17
+          Font.Height = -18
           Font.Name = 'Segoe UI'
           Font.Style = []
           ImageAlignment = iaTop
           ImageIndex = 4
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 2
           StyleName = 'Windows'
-          ExplicitLeft = 727
-          ExplicitHeight = 102
+          ExplicitLeft = 753
         end
-        object btnImprimirRegistros: TButton
-          Left = 590
+        object btnImprimir: TButton
+          Left = 645
           Top = 0
           Width = 110
           Height = 96
@@ -166,70 +162,62 @@ object FormPadrao: TFormPadrao
           Align = alRight
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -17
+          Font.Height = -18
           Font.Name = 'Segoe UI'
           Font.Style = []
           ImageAlignment = iaTop
           ImageIndex = 5
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 3
           StyleName = 'Windows'
-          ExplicitLeft = 626
-          ExplicitHeight = 102
+          ExplicitLeft = 643
         end
       end
       object pnlPesquisaCentro: TPanel
         Left = 0
         Top = 91
-        Width = 1030
-        Height = 411
+        Width = 1085
+        Height = 435
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitTop = 432
-        ExplicitWidth = 760
-        ExplicitHeight = 73
-        object dbgDados: TDBGrid
+        ExplicitWidth = 1083
+        ExplicitHeight = 427
+        object dbgrdDados: TDBGrid
           Left = 0
           Top = 0
-          Width = 1030
-          Height = 411
+          Width = 1085
+          Height = 435
           Align = alClient
           TabOrder = 0
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
-          TitleFont.Height = -18
+          TitleFont.Height = -20
           TitleFont.Name = 'Segoe UI'
           TitleFont.Style = []
         end
       end
     end
-    object cardCadastro: TCard
+    object crdCadastro: TCard
       Left = 1
       Top = 1
-      Width = 1030
-      Height = 598
-      Caption = 'cardCadastro'
+      Width = 1085
+      Height = 622
+      Caption = 'Cadastro'
       CardIndex = 1
       TabOrder = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 185
-      ExplicitHeight = 41
       object pnlCadastroRodape: TPanel
         Left = 0
-        Top = 496
-        Width = 1030
+        Top = 520
+        Width = 1085
         Height = 102
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitTop = 464
-        ExplicitWidth = 965
-        object btnCadastroSalvar: TButton
-          Left = 920
+        object btnactCnPrefixWizard5: TButton
+          Left = 975
           Top = 0
           Width = 110
           Height = 102
@@ -243,14 +231,13 @@ object FormPadrao: TFormPadrao
           ImageAlignment = iaTop
           ImageIndex = 7
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 0
           StyleName = 'Windows'
-          ExplicitLeft = 913
         end
-        object btnCadastroCancelar: TButton
-          Left = 810
+        object btnactCnPrefixWizard6: TButton
+          Left = 865
           Top = 0
           Width = 110
           Height = 102
@@ -264,16 +251,15 @@ object FormPadrao: TFormPadrao
           ImageAlignment = iaTop
           ImageIndex = 3
           ImageMargins.Top = 10
-          Images = imglIcones
+          Images = ilFormPadrao
           ParentFont = False
           TabOrder = 1
           StyleName = 'Windows'
-          ExplicitLeft = 793
         end
       end
     end
   end
-  object imglIcones: TImageList
+  object ilFormPadrao: TImageList
     ColorDepth = cd32Bit
     Height = 60
     Width = 60
@@ -5867,7 +5853,7 @@ object FormPadrao: TFormPadrao
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
   end
-  object ActionListFormPadrao: TActionList
+  object actlstFormPadrao: TActionList
     Left = 936
     Top = 217
     object actAdicionar: TAction
