@@ -51,6 +51,7 @@ type
     actPesquisar: TAction;
     actCancelar: TAction;
     actSalvar: TAction;
+    dsPadrao: TDataSource;
     procedure edtPesquisaKeyDown(Sender: TObject; var Key: Word; Shift:
       TShiftState);
     procedure actAlterarExecute(Sender: TObject);
@@ -60,8 +61,9 @@ type
     procedure actImprimirExecute(Sender: TObject);
     procedure actAdicionarExecute(Sender: TObject);
     procedure actPesquisarExecute(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
-    procedure AtivarCard(const Card: TCard);
+    procedure AtivarCard(const ACard: TCard);
   end;
 
 var
@@ -111,14 +113,24 @@ procedure TFormPadrao.edtPesquisaKeyDown(Sender: TObject; var Key: Word; Shift:
 begin
   if Key = VK_RETURN then
   begin
-    actPesquisarExecute(Sender);
-    Key := 0
+    Key := 0;
+    actPesquisarExecute(Sender)
   end;
 end;
 
-procedure TFormPadrao.AtivarCard(const Card: TCard);
+procedure TFormPadrao.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
 begin
-  crdpnlPnlConteudo.ActiveCard := Card
+  if Key = VK_ESCAPE then
+  begin
+    Key := 0;
+    Close
+  end;
+end;
+
+procedure TFormPadrao.AtivarCard(const ACard: TCard);
+begin
+  crdpnlPnlConteudo.ActiveCard := ACard
 end;
 
 end.

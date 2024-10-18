@@ -13,9 +13,9 @@ type
     miCadastro: TMenuItem;
     miRelatorio: TMenuItem;
     miAjuda: TMenuItem;
-    MenuItemCadastroPadrao: TMenuItem;
+    MenuItemCadastroUsuarios: TMenuItem;
     procedure FormCreate(Sender: TObject);
-    procedure MenuItemCadastroPadraoClick(Sender: TObject);
+    procedure MenuItemCadastroUsuariosClick(Sender: TObject);
   end;
 
 var
@@ -26,7 +26,7 @@ implementation
 {$R *.dfm}
 
 uses
-  Cronos.Formularios.uFormPadrao,
+  Cronos.Formularios.uFormUsuarios,
   Cronos.Formularios.uFormSplash;
 
 procedure TFormPrincipal.FormCreate(Sender: TObject);
@@ -39,9 +39,9 @@ begin
     end;
 end;
 
-procedure TFormPrincipal.MenuItemCadastroPadraoClick(Sender: TObject);
+procedure TFormPrincipal.MenuItemCadastroUsuariosClick(Sender: TObject);
 begin
-  FormPadrao.Show
+  FormUsuarios.Show
 end;
 
 end.

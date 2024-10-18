@@ -139,6 +139,16 @@
             <Form>FormSplash</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Fontes\Modulos\Cronos.Modulos.uDataModuleConexao.pas">
+            <Form>DataModuleConexao</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Fontes\Formularios\Cronos.Formularios.uFormUsuarios.pas">
+            <Form>FormUsuarios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Fontes\Configuracoes\Cronos.Configuracoes.uConfiguracaoConexao.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

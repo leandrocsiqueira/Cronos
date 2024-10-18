@@ -21,9 +21,9 @@ object FormPrincipal: TFormPrincipal
     Top = 248
     object miCadastro: TMenuItem
       Caption = 'Cadastro'
-      object MenuItemCadastroPadrao: TMenuItem
-        Caption = 'Cadastro Padr'#227'o'
-        OnClick = MenuItemCadastroPadraoClick
+      object MenuItemCadastroUsuarios: TMenuItem
+        Caption = 'Usu'#225'rios'
+        OnClick = MenuItemCadastroUsuariosClick
       end
     end
     object miRelatorio: TMenuItem

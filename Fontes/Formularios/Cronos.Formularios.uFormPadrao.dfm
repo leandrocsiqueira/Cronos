@@ -11,7 +11,9 @@ object FormPadrao: TFormPadrao
   Font.Height = -20
   Font.Name = 'Segoe UI'
   Font.Style = []
+  KeyPreview = True
   Position = poScreenCenter
+  OnKeyDown = FormKeyDown
   TextHeight = 28
   object crdpnlPnlConteudo: TCardPanel
     Left = 0
@@ -22,8 +24,6 @@ object FormPadrao: TFormPadrao
     ActiveCard = crdPesquisa
     Caption = 'CardPanelConteudo'
     TabOrder = 0
-    ExplicitWidth = 1085
-    ExplicitHeight = 616
     object crdPesquisa: TCard
       Left = 1
       Top = 1
@@ -32,8 +32,6 @@ object FormPadrao: TFormPadrao
       Caption = 'Pesquisa'
       CardIndex = 0
       TabOrder = 0
-      ExplicitWidth = 1083
-      ExplicitHeight = 614
       object pnlPesquisaTopo: TPanel
         Left = 0
         Top = 0
@@ -42,7 +40,6 @@ object FormPadrao: TFormPadrao
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 1083
         object lblPesquisa: TLabel
           Left = 11
           Top = 18
@@ -77,7 +74,6 @@ object FormPadrao: TFormPadrao
           ParentFont = False
           TabOrder = 1
           StyleName = 'Windows'
-          ExplicitLeft = 982
         end
       end
       object pnlPesquisaRodape: TPanel
@@ -88,8 +84,6 @@ object FormPadrao: TFormPadrao
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitTop = 518
-        ExplicitWidth = 1083
         object btnAdicionar: TButton
           Left = 975
           Top = 0
@@ -109,7 +103,6 @@ object FormPadrao: TFormPadrao
           ParentFont = False
           TabOrder = 0
           StyleName = 'Windows'
-          ExplicitLeft = 973
         end
         object btnAlterar: TButton
           Left = 865
@@ -130,7 +123,6 @@ object FormPadrao: TFormPadrao
           ParentFont = False
           TabOrder = 1
           StyleName = 'Windows'
-          ExplicitLeft = 863
         end
         object btnExcluir: TButton
           Left = 755
@@ -151,7 +143,6 @@ object FormPadrao: TFormPadrao
           ParentFont = False
           TabOrder = 2
           StyleName = 'Windows'
-          ExplicitLeft = 753
         end
         object btnImprimir: TButton
           Left = 645
@@ -172,7 +163,6 @@ object FormPadrao: TFormPadrao
           ParentFont = False
           TabOrder = 3
           StyleName = 'Windows'
-          ExplicitLeft = 643
         end
       end
       object pnlPesquisaCentro: TPanel
@@ -183,8 +173,6 @@ object FormPadrao: TFormPadrao
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 2
-        ExplicitWidth = 1083
-        ExplicitHeight = 427
         object dbgrdDados: TDBGrid
           Left = 0
           Top = 0
@@ -5891,5 +5879,9 @@ object FormPadrao: TFormPadrao
       Caption = 'Salvar'
       OnExecute = actSalvarExecute
     end
+  end
+  object dsPadrao: TDataSource
+    Left = 936
+    Top = 304
   end
 end
